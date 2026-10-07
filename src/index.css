@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-weight: 400;
+  }
+  h1, h2, h3 {
+    @apply font-display text-petrol;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: #fc8974;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply mb-4 inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-coral-deep;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-8 bg-coral;
+  }
+  .section-title {
+    @apply font-display text-[2.1rem] font-medium leading-[1.1] sm:text-5xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[0.95rem] font-medium transition duration-300;
+  }
+  .btn-primary {
+    @apply bg-petrol text-white shadow-soft hover:-translate-y-0.5 hover:bg-petrol-dark;
+  }
+  .btn-ghost {
+    @apply border border-petrol/25 text-petrol hover:border-petrol hover:bg-petrol hover:text-white;
+  }
+}
+
+/* Entrada suave ao rolar */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--d, 0ms);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
