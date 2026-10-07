@@ -16,7 +16,7 @@ export default function Hero() {
           </Reveal>
           <Reveal delay={80}>
             <h1 className="font-display text-[2.6rem] font-medium leading-[1.04] sm:text-6xl lg:text-[4.4rem]">
-              {hero.title} <em className="font-normal italic text-coral-deep">{hero.titleAccent}</em>
+              {hero.title} <em className="block whitespace-nowrap font-normal italic text-coral-deep">{hero.titleAccent}</em>
             </h1>
           </Reveal>
           <Reveal delay={160}>
@@ -55,7 +55,7 @@ export default function Hero() {
               <img src="/img/logo-mark.png" alt="" className="h-10 w-auto" />
               <div className="leading-tight">
                 <p className="font-display text-lg font-semibold text-petrol">{clinic.name}</p>
-                <p className="text-xs text-slate2">Psicóloga e Psicanalista · {clinic.crp}</p>
+                <p className="text-xs text-slate2">Psicóloga, Psicanalista e Neuropsicóloga · {clinic.crp}</p>
               </div>
             </div>
           </div>

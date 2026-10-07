@@ -1,5 +1,5 @@
 import { clinic, contact } from "../data/clinic";
-import { ArrowIcon, InstagramIcon, PinIcon, WhatsAppIcon } from "./Icons";
+import { ArrowIcon, CarIcon, InstagramIcon, PinIcon, WhatsAppIcon } from "./Icons";
 import Reveal from "./Reveal";
 
 export default function Contact() {
@@ -34,6 +34,18 @@ export default function Contact() {
               </li>
               <li className="flex gap-4">
                 <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-sage-soft text-petrol">
+                  <CarIcon className="h-6 w-6" />
+                </span>
+                <div className="leading-snug">
+                  <p className="font-medium text-petrol">Estacionamento</p>
+                  <p className="text-ink/80">{clinic.parking.street}</p>
+                  <a href={clinic.parkingMapLink} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 text-sm text-coral-deep hover:underline">
+                    Ver no mapa <ArrowIcon className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </li>
+              <li className="flex gap-4">
+                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-sage-soft text-petrol">
                   <WhatsAppIcon className="h-6 w-6" />
                 </span>
                 <div className="leading-snug">
@@ -57,8 +69,14 @@ export default function Contact() {
             </ul>
           </Reveal>
 
+          <Reveal delay={240}>
+            <p className="mt-8 border-l-2 border-coral pl-4 text-[0.95rem] leading-snug text-ink/80">
+              <span className="font-medium text-petrol">Valores:</span> a combinar com a profissional.
+            </p>
+          </Reveal>
+
           <Reveal delay={260}>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <a href={clinic.whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary">
                 <WhatsAppIcon className="h-5 w-5" /> Agendar pelo WhatsApp
               </a>

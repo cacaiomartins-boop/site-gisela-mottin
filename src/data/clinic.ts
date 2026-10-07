@@ -14,6 +14,13 @@ const address = {
   zip: "90035-077",
 };
 
+// Estacionamento (segundo endereço)
+const parking = {
+  street: "Rua Ramiro Barcelos, 1201",
+  city: "Porto Alegre",
+  state: "RS",
+};
+
 const mapQuery = `${address.street}, ${address.neighborhood}, ${address.city} - ${address.state}, ${address.zip}`;
 
 export const clinic = {
@@ -29,6 +36,9 @@ export const clinic = {
   doctoralia:
     "https://www.doctoralia.com.br/gisela-mottin/psicologo-psicanalista/porto-alegre",
   address,
+  parking,
+  parkingMapLink: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${parking.street}, ${parking.city} - ${parking.state}`)}`,
+  pricing: "Valores a combinar com a profissional",
   mapEmbed: `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`,
   mapLink: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`,
 };
@@ -52,7 +62,7 @@ export const hero = {
 
 export const about = {
   eyebrow: "Sobre",
-  title: "Psicóloga e psicanalista, com olhar da neuropsicologia",
+  title: "Psicóloga, com ênfase em psicanálise e Avaliação Neuropsicológica",
   paragraphs: [
     "Gisela Mottin é psicóloga em Porto Alegre, com ênfase em psicanálise. Acredita na escuta sem julgamento como ponto de partida para que cada pessoa possa compreender o que sente e reencontrar o próprio caminho.",
     "Atende adolescentes, adultos e idosos em psicoterapia individual, acompanhando temas como ansiedade, depressão, luto, crises existenciais e dificuldades nos relacionamentos.",
@@ -93,18 +103,18 @@ export const services = {
   items: [
     {
       icon: "chat",
-      title: "Psicoterapia psicanalítica",
-      text: "Espaço individual e sigiloso para falar do que pesa, entender padrões e construir novas formas de viver. Para adolescentes, adultos e idosos.",
+      title: "Psicoterapia Psicanalítica",
+      text: "Um espaço de escuta individual, acolhedor e sigiloso, dedicado à compreensão de sentimentos, conflitos e padrões que se repetem ao longo da vida. O processo terapêutico favorece o autoconhecimento e a construção de novas formas de lidar consigo, com os relacionamentos e com as diferentes experiências da vida.",
     },
     {
       icon: "heart",
-      title: "Terapia de casal",
-      text: "Um lugar de escuta para o casal rever combinados, melhorar a comunicação e atravessar conflitos com mais clareza.",
+      title: "Terapia de Casal",
+      text: "Um espaço de escuta e diálogo para que o casal possa compreender melhor sua dinâmica, reconhecer dificuldades e rever padrões de relacionamento. O trabalho terapêutico busca favorecer uma comunicação mais clara, a elaboração de conflitos e a construção de novas possibilidades para a relação.",
     },
     {
       icon: "leaf",
-      title: "Luto e perdas",
-      text: "Acolhimento para quem vive uma perda, seja de uma pessoa, de uma fase ou de um projeto de vida, respeitando o tempo de cada um.",
+      title: "Luto e Perdas",
+      text: "Acolhimento psicológico para pessoas que estão vivenciando diferentes formas de perda, como a morte de alguém significativo, o término de uma relação, mudanças importantes, perdas profissionais ou a interrupção de projetos de vida. O acompanhamento respeita a singularidade e o tempo de cada pessoa, oferecendo um espaço seguro para a elaboração dessa experiência.",
     },
     {
       icon: "brain",
@@ -129,7 +139,7 @@ export const services = {
     "Estresse",
     "Crise existencial",
     "Luto",
-    "Ataque de pânico",
+    "Transtorno de pânico",
     "Conflitos de relacionamento",
     "Alterações de humor",
     "Angústia e medo",

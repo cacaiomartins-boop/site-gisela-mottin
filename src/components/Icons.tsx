@@ -24,6 +24,9 @@ export const PinIcon = ({ className }: P) => (
 export const PhoneIcon = ({ className }: P) => (
   <svg {...base} className={className}><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" /></svg>
 );
+export const CarIcon = ({ className }: P) => (
+  <svg {...base} className={className}><path d="M5 16V12l1.6-4.2A2 2 0 0 1 8.5 6.5h7a2 2 0 0 1 1.9 1.3L19 12v4" /><path d="M3.5 12h17v4.5h-17zM6 19v-2.5M18 19v-2.5" /><circle cx="7.5" cy="14.3" r=".7" fill="currentColor" /><circle cx="16.5" cy="14.3" r=".7" fill="currentColor" /></svg>
+);
 export const ArrowIcon = ({ className }: P) => (
   <svg {...base} className={className}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
 );

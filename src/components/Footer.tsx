@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <Brand light />
           <p className="mt-5 max-w-xs text-sm leading-relaxed">
-            Psicóloga e Psicanalista · {clinic.crp}
+            Psicóloga, Psicanalista e Neuropsicóloga · {clinic.crp}
             <br />
             Psicoterapia e Neuropsicologia em Porto Alegre.
           </p>
@@ -27,6 +27,7 @@ export default function Footer() {
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-coral">Contato</p>
           <ul className="space-y-2 text-sm">
             <li>{clinic.address.street}, {clinic.address.complement}</li>
+            <li>Estacionamento: {clinic.parking.street}</li>
             <li>{clinic.address.neighborhood}, {clinic.address.city} - {clinic.address.state}</li>
             <li><a href={clinic.whatsappLink} target="_blank" rel="noreferrer" className="hover:text-white">{clinic.whatsappDisplay}</a></li>
             <li><a href={clinic.instagram} target="_blank" rel="noreferrer" className="hover:text-white">{clinic.instagramHandle}</a></li>
