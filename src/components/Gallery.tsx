@@ -18,7 +18,7 @@ export default function Gallery() {
   }, [active]);
 
   return (
-    <section id="consultorio" className="py-20 sm:py-28">
+    <section id="consultorio" className="bg-sand py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal><p className="eyebrow">{gallery.eyebrow}</p></Reveal>

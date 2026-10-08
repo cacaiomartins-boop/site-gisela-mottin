@@ -15,7 +15,7 @@ export default function Hero() {
             <p className="eyebrow">{hero.eyebrow}</p>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="font-display text-[2.6rem] font-medium leading-[1.04] sm:text-6xl lg:text-[4.4rem]">
+            <h1 className="text-balance font-display text-[2.6rem] font-medium leading-[1.04] sm:text-6xl lg:text-[4.4rem]">
               {hero.title} <em className="block whitespace-nowrap font-normal italic text-coral-deep">{hero.titleAccent}</em>
             </h1>
           </Reveal>

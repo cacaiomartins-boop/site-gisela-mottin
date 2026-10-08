@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { clinic, nav } from "../data/clinic";
+import { Link } from "../router";
 import { CloseIcon, MenuIcon } from "./Icons";
 
 export function Brand({ light = false }: { light?: boolean }) {
   return (
-    <a href="#inicio" className="flex items-center gap-3" aria-label={`${clinic.name} - início`}>
+    <Link to="/" className="flex items-center gap-3" ariaLabel={`${clinic.name} - início`}>
       <img src="/img/logo-mark.png" alt="" className="h-11 w-auto" />
       <span className="leading-none">
         <span
@@ -22,7 +23,7 @@ export function Brand({ light = false }: { light?: boolean }) {
           PSICOTERAPIA
         </span>
       </span>
-    </a>
+    </Link>
   );
 }
 
@@ -50,13 +51,13 @@ export default function Header() {
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Principal">
           {nav.map((i) => (
-            <a
+            <Link
               key={i.href}
-              href={i.href}
+              to={i.href}
               className="text-[0.92rem] text-ink/80 transition hover:text-coral-deep"
             >
               {i.label}
-            </a>
+            </Link>
           ))}
           <a href={clinic.whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary !px-6 !py-2.5">
             Agendar consulta
@@ -76,14 +77,14 @@ export default function Header() {
       {open && (
         <nav className="border-t border-petrol/10 bg-paper px-5 pb-6 pt-2 lg:hidden" aria-label="Mobile">
           {nav.map((i) => (
-            <a
+            <Link
               key={i.href}
-              href={i.href}
+              to={i.href}
               onClick={() => setOpen(false)}
               className="block border-b border-petrol/10 py-4 font-display text-xl text-petrol"
             >
               {i.label}
-            </a>
+            </Link>
           ))}
           <a href={clinic.whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary mt-5 w-full">
             Agendar consulta

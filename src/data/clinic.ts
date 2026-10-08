@@ -44,12 +44,34 @@ export const clinic = {
 };
 
 export const nav = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Atuação", href: "#atuacao" },
-  { label: "Neuropsicologia", href: "#neuropsicologia" },
-  { label: "Consultório", href: "#consultorio" },
-  { label: "Contato", href: "#contato" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Atuação", href: "/#atuacao" },
+  { label: "Neuropsicologia", href: "/#neuropsicologia" },
+  { label: "Consultório", href: "/#consultorio" },
+  { label: "Publicações", href: "/publicacoes" },
+  { label: "Contato", href: "/#contato" },
 ];
+
+export const publications = {
+  eyebrow: "Publicações",
+  title: "Textos sobre mente, emoção e cuidado",
+  titleAccent: "emoção e cuidado",
+  intro:
+    "Reflexões da Gisela sobre psicanálise, neuropsicologia e saúde emocional, escritas em linguagem simples para quem quer entender melhor a si mesmo.",
+  emptyEyebrow: "Em breve",
+  emptyTitle: "Os primeiros textos estão a caminho",
+  emptyText:
+    "Este espaço vai reunir artigos e reflexões sobre os temas que acompanham o dia a dia da clínica. Enquanto isso, você pode conhecer o trabalho ou falar diretamente com a Gisela.",
+  allLabel: "Todos",
+  readMore: "Ler texto",
+  back: "Todas as publicações",
+  notFoundTitle: "Texto não encontrado",
+  notFoundText: "Esse texto pode ter sido removido ou o endereço está incorreto.",
+  authorNote: "Psicóloga, com ênfase em psicanálise e Avaliação Neuropsicológica",
+  authorImage: "/img/gisela-poltrona.jpg",
+  ctaTitle: "Quer conversar sobre isso?",
+  ctaText: "Agende uma consulta e conte com um espaço de escuta e acolhimento.",
+};
 
 export const hero = {
   eyebrow: "Psicologia · Psicanálise · Neuropsicologia",
@@ -195,9 +217,9 @@ export const gallery = {
   title: "Um ambiente pensado para você se sentir à vontade",
   text: "Acolhedor, silencioso e com a identidade de cuidado que a logo representa.",
   items: [
-    { src: "/img/placa-logo.jpg", alt: "Logo Gisela Mottin Psicoterapia iluminada em painel de madeira", span: "row-span-2" },
+    { src: "/img/placa-logo.jpg", alt: "Logo Gisela Mottin Psicoterapia iluminada em painel de madeira", span: "md:row-span-2" },
     { src: "/img/sala-1.jpg", alt: "Sala de atendimento com poltrona, sofá e quadros de árvores", span: "" },
-    { src: "/img/placa-planta.jpg", alt: "Recepção do consultório com a logo e uma planta", span: "row-span-2" },
+    { src: "/img/placa-planta.jpg", alt: "Recepção do consultório com a logo e uma planta", span: "md:row-span-2" },
     { src: "/img/sala-2.jpg", alt: "Sala de atendimento com sofá e mesa lateral", span: "" },
     { src: "/img/gisela-placa.jpg", alt: "Gisela ao lado da logo do consultório", span: "col-span-2" },
     { src: "/img/gisela-leitura.jpg", alt: "Gisela lendo na poltrona do consultório", span: "col-span-2 lg:col-span-1" },

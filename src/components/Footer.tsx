@@ -1,4 +1,5 @@
 import { clinic, nav } from "../data/clinic";
+import { Link } from "../router";
 import { Brand } from "./Header";
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {nav.map((n) => (
               <li key={n.href}>
-                <a href={n.href} className="hover:text-white">{n.label}</a>
+                <Link to={n.href} className="hover:text-white">{n.label}</Link>
               </li>
             ))}
           </ul>
